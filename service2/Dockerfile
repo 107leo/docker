@@ -4,8 +4,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install flask
+RUN pip install flask gunicorn
 
 EXPOSE 5001
 
-CMD ["python", "micro2.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "micro2:app"]
+
