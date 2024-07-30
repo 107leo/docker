@@ -8,3 +8,4 @@ services:
     build: ./service2
     ports:
       - "5001:5001"
+
