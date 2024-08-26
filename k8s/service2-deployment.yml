@@ -17,3 +17,10 @@ spec:
         image: leo107/service2:latest
         ports:
         - containerPort: 5001
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"

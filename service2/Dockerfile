@@ -8,5 +8,5 @@ RUN pip install flask gunicorn
 
 EXPOSE 5001
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5001", "micro2:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5001", "--timeout", "120", "micro2:app"]
 
